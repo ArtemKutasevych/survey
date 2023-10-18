@@ -25,9 +25,13 @@ class QuestionsService: QuestionsServiceProtocol {
     }
 }
 
-struct Question: Codable {
+struct Question: Codable, Equatable {
     let id: Int
     let question: String
+    
+    static func ==(lhs: Question, rhs: Question) -> Bool {
+        return lhs.id == rhs.id && lhs.question == rhs.question
+    }
 }
 
 struct NoReply: Decodable {}

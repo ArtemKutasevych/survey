@@ -58,7 +58,6 @@ class SurveyViewModel: ObservableObject {
                                         case .finished: 
                                             self?.currentQuestion.answered = true
                                             self?.viewState = .success
-                                            print("success")
                                         }
                 self?.isLoaded = true
                                 }, receiveValue: { _ in})
@@ -67,15 +66,15 @@ class SurveyViewModel: ObservableObject {
     }
     
     func increment() {
-         let id = currentQuestion.question.id
-             guard id < questions.count else { return }
+        let id = currentQuestion.question.id
+        guard id < questions.count else { return }
         
         currentQuestion = self.questions[id]
         viewState = .normal
     }
     
     func decrement() {
-         let id = currentQuestion.question.id
+        let id = currentQuestion.question.id
         guard id >= 2 else { return }
         
         currentQuestion = self.questions[id - 2]
