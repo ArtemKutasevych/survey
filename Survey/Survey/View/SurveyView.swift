@@ -79,7 +79,7 @@ struct SurveyView: View {
                     Button(!viewModel.currentQuestion.answered ? "Submit" : "Already submitted") {
                         viewModel.submitAnswer()
                     }
-                    .disabled(viewModel.currentQuestion.answered)
+                    .disabled(viewModel.currentQuestion.answered || viewModel.currentQuestion.answer.isEmpty)
                     
                     Spacer()
                 }

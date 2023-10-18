@@ -59,6 +59,9 @@ class SurveyViewModel: ObservableObject {
                                             self?.currentQuestion.answered = true
                                             self?.viewState = .success
                                         }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self?.viewState = .normal
+                }
                 self?.isLoaded = true
                                 }, receiveValue: { _ in})
             .store(in: &cancellables)
