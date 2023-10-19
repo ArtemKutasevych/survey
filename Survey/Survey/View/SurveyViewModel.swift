@@ -16,11 +16,11 @@ enum ViewState {
 
 class SurveyViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
-    let questionsService: QuestionsServiceProtocol
+    private let questionsService: QuestionsServiceProtocol
     var questions: [QuestionViewModel] = []
     @Published var currentQuestion: QuestionViewModel
     @Published var viewState: ViewState = .normal
-    var isLoaded = false
+    @Published var isLoaded = false
     
     init(questionsService: QuestionsServiceProtocol) {
         self.questionsService = questionsService
@@ -32,7 +32,6 @@ class SurveyViewModel: ObservableObject {
         questionsService.getQuestions()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { data in
-            
         }, receiveValue: { [weak self] questions in
             guard let self else { return }
             for question in questions {

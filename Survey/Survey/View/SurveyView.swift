@@ -11,7 +11,7 @@ struct SurveyView: View {
     @StateObject private var viewModel = SurveyViewModel(questionsService: QuestionsService())
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    var btnBack : some View { Button(action: {
+    private var btnBack: some View { Button(action: {
         self.presentationMode.wrappedValue.dismiss()
     }) {
         HStack {
@@ -74,6 +74,7 @@ struct SurveyView: View {
                         .padding(EdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16))
                     
                     TextField("Type here for an answer", text: $viewModel.currentQuestion.answer)
+                        .font(.title3)
                         .padding(EdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16))
                     
                     Button(!viewModel.currentQuestion.answered ? "Submit" : "Already submitted") {
@@ -87,7 +88,7 @@ struct SurveyView: View {
                 .toolbarBackground(Color(UIColor.lightGray))
                 .toolbar {
                     ToolbarItem(placement: .principal) {
-                        Text("Question \(viewModel.currentQuestion.question.id)/ \(viewModel.questions.count)")
+                        Text("Question \(viewModel.currentQuestion.question.id)/\(viewModel.questions.count)")
                     }
                     ToolbarItemGroup(placement:.primaryAction) {
                         Button("Previous") {
