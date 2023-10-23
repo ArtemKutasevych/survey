@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct SurveyApp: App {
     var body: some Scene {
         WindowGroup {
-            InitialView()
+            QuestionsView(
+                store: Store(initialState: Questions.State()) {
+                    Questions()._printChanges()
+                }
+            )
         }
     }
 }
+
