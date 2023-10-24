@@ -34,4 +34,4 @@ struct Question: Codable, Equatable {
     }
 }
 
-struct NoReply: Decodable {}
+struct NoReply: Decodable, Equatable {}

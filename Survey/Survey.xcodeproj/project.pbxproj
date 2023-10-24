@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300BC77A2AE1D01E0057F04F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 300BC7792AE1D01E0057F04F /* ComposableArchitecture */; };
+		300BC77E2AE29D220057F04F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300BC77D2AE29D220057F04F /* Question.swift */; };
+		300BC7802AE2A93A0057F04F /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300BC77F2AE2A93A0057F04F /* Questions.swift */; };
+		300BC7822AE5C2C90057F04F /* NormalSuccessErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300BC7812AE5C2C90057F04F /* NormalSuccessErrorView.swift */; };
+		300BC7842AE6572E0057F04F /* QuestionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300BC7832AE6572E0057F04F /* QuestionClient.swift */; };
 		30135E032ADFBBCC00BB9DA5 /* SurveyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30135E022ADFBBCC00BB9DA5 /* SurveyApp.swift */; };
 		30135E052ADFBBCC00BB9DA5 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30135E042ADFBBCC00BB9DA5 /* InitialView.swift */; };
 		30135E072ADFBBCD00BB9DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30135E062ADFBBCD00BB9DA5 /* Assets.xcassets */; };
@@ -32,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		300BC77D2AE29D220057F04F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		300BC77F2AE2A93A0057F04F /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		300BC7812AE5C2C90057F04F /* NormalSuccessErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalSuccessErrorView.swift; sourceTree = "<group>"; };
+		300BC7832AE6572E0057F04F /* QuestionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionClient.swift; sourceTree = "<group>"; };
 		30135DFF2ADFBBCC00BB9DA5 /* Survey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Survey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30135E022ADFBBCC00BB9DA5 /* SurveyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyApp.swift; sourceTree = "<group>"; };
 		30135E042ADFBBCC00BB9DA5 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
@@ -53,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300BC77A2AE1D01E0057F04F /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +102,10 @@
 				30135E2C2ADFC0A700BB9DA5 /* View */,
 				30135E062ADFBBCD00BB9DA5 /* Assets.xcassets */,
 				30135E082ADFBBCD00BB9DA5 /* Preview Content */,
+				300BC77D2AE29D220057F04F /* Question.swift */,
+				300BC7812AE5C2C90057F04F /* NormalSuccessErrorView.swift */,
+				300BC77F2AE2A93A0057F04F /* Questions.swift */,
+				300BC7832AE6572E0057F04F /* QuestionClient.swift */,
 			);
 			path = Survey;
 			sourceTree = "<group>";
@@ -150,6 +164,9 @@
 			dependencies = (
 			);
 			name = Survey;
+			packageProductDependencies = (
+				300BC7792AE1D01E0057F04F /* ComposableArchitecture */,
+			);
 			productName = Survey;
 			productReference = 30135DFF2ADFBBCC00BB9DA5 /* Survey.app */;
 			productType = "com.apple.product-type.application";
@@ -200,6 +217,9 @@
 				Base,
 			);
 			mainGroup = 30135DF62ADFBBCC00BB9DA5;
+			packageReferences = (
+				300BC7782AE1D01E0057F04F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 30135E002ADFBBCC00BB9DA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,9 +257,13 @@
 				30135E052ADFBBCC00BB9DA5 /* InitialView.swift in Sources */,
 				30135E032ADFBBCC00BB9DA5 /* SurveyApp.swift in Sources */,
 				30135E3B2ADFCC7A00BB9DA5 /* SurveyViewModel.swift in Sources */,
+				300BC7802AE2A93A0057F04F /* Questions.swift in Sources */,
+				300BC77E2AE29D220057F04F /* Question.swift in Sources */,
 				30135E352ADFC7BC00BB9DA5 /* QuestionsServise.swift in Sources */,
 				30135E302ADFC0CA00BB9DA5 /* SurveyView.swift in Sources */,
 				30135E372ADFC92600BB9DA5 /* URLSessionAPIClient.swift in Sources */,
+				300BC7822AE5C2C90057F04F /* NormalSuccessErrorView.swift in Sources */,
+				300BC7842AE6572E0057F04F /* QuestionClient.swift in Sources */,
 				30135E392ADFCA6E00BB9DA5 /* QuestionsEndpoint.swift in Sources */,
 				30135E332ADFC78C00BB9DA5 /* ApiEndpoint.swift in Sources */,
 			);
@@ -513,6 +537,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		300BC7782AE1D01E0057F04F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		300BC7792AE1D01E0057F04F /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 300BC7782AE1D01E0057F04F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30135DF72ADFBBCC00BB9DA5 /* Project object */;
 }
