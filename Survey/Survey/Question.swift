@@ -23,11 +23,6 @@ struct QuestionReducer: Reducer {
     
     var body: some Reducer<State, Action> {
         BindingReducer()
-        Reduce { state, action in
-            switch action {
-            default: return .none
-            }
-        }
     }
 }
 

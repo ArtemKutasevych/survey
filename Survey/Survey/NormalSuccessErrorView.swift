@@ -22,7 +22,7 @@ struct NormalView: View {
 }
 
 struct ErrorView: View {
-    var submitAnswerAction: (() -> Void)
+    var submitAnswerAction: () -> Void
     
     var body: some View {
         HStack {

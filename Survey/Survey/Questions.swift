@@ -72,6 +72,7 @@ struct Questions: Reducer {
             case .fetchQuestionsResponce(.failure):
                 state.questions = []
                 state.isLoading = false
+                state.answerState = .error
                 return .none
                 
             case let .fetchQuestionsResponce(.success(response)):

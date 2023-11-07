@@ -20,8 +20,6 @@ extension DependencyValues {
     }
 }
 
-// MARK: - Live API implementation
-
 extension QuestionClient: DependencyKey {
     static let baseURL = URL(string: "https://xm-assignment.web.app")
     static let liveValue = QuestionClient(
