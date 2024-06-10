@@ -8,8 +8,16 @@
 import Foundation
 import ComposableArchitecture
 
+
+
+
+enum TypeResponce<EndpointType> {
+    case success(data: EndpointType)
+    case error(Error)
+}
+
 struct QuestionClient {
-    var getQuestions: @Sendable () async throws -> [Question]
+    var getQuestions: @Sendable () async throws -> TypeResponce
     var postAnswer: @Sendable (Int, String) async throws -> NoReply
 }
 
@@ -21,7 +29,7 @@ extension DependencyValues {
 }
 
 extension QuestionClient: DependencyKey {
-    static let baseURL = URL(string: "https://xm-assignment.web.app")
+    static var baseURL = URL(string: "https://xm-assignment.web.app")
     static let liveValue = QuestionClient(
         getQuestions: {
             let path = "/questions"

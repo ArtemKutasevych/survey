@@ -28,6 +28,11 @@ class SurveyViewModel: ObservableObject {
         self.fetchQuestions()
     }
     
+    func addQuestionViewModel(question: QuestionViewModel) {
+        
+        questions.append(question)
+    }
+    
     private func fetchQuestions() {
         questionsService.getQuestions()
             .receive(on: RunLoop.main)
