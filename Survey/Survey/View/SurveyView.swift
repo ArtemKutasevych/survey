@@ -69,18 +69,18 @@ struct SurveyView: View {
                         }
                     }
                     
-                    Text(viewModel.currentQuestion.question.question)
-                        .font(.title)
-                        .padding(EdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16))
-                    
-                    TextField("Type here for an answer", text: $viewModel.currentQuestion.answer)
-                        .font(.title3)
-                        .padding(EdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16))
-                    
-                    Button(!viewModel.currentQuestion.answered ? "Submit" : "Already submitted") {
-                        viewModel.submitAnswer()
-                    }
-                    .disabled(viewModel.currentQuestion.answered || viewModel.currentQuestion.answer.isEmpty)
+//                    Text(viewModel.currentQuestion.question.question)
+//                        .font(.title)
+//                        .padding(EdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16))
+//                    
+//                    TextField("Type here for an answer", text: $viewModel.currentQuestion.answer)
+//                        .font(.title3)
+//                        .padding(EdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16))
+//                    
+//                    Button(!viewModel.currentQuestion.answered ? "Submit" : "Already submitted") {
+//                        viewModel.submitAnswer()
+//                    }
+//                    .disabled(viewModel.currentQuestion.answered || viewModel.currentQuestion.answer.isEmpty)
                     
                     Spacer()
                 }
